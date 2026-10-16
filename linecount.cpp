@@ -4,16 +4,45 @@
 using namespace std;
 
 int main() {
-    string line;
     int lineCount = 0;
+    string line;
 
-    // Read input line-by-line until the end of the text/file
+    // This loop reads text line-by-line until the end of the input stream
     while (getline(cin, line)) {
-        lineCount++; // Add 1 to the line count for every line read
+        lineCount++;
     }
-
-    // Print the total number of lines followed by a newline
-    cout << lineCount << endl;
+    
+    cout << lineCount << '\n';
 
     return 0;
 }
+
+/*pRT 3
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string longest = "";
+    string line;
+
+    // This loop reads text line-by-line until the end of the input stream
+    while (getline(cin, line)) {
+        // If the current line is longer than our saved longest line, update it
+        if (line.size() > longest.size()) {
+            longest = line;
+        }
+    }
+    
+    cout << longest << '\n';
+
+    return 0;
+}
+
+
+
+
+
+*/
